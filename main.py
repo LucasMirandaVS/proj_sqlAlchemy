@@ -22,7 +22,7 @@ class Produto(Base):
     fornecedor_id = Column(Integer, ForeignKey('fornecedores.id'))
     fornecedor = relationship("Fornecedor")  # Relação entre Produto e Fornecedor
 
-engine = create_engine('sqlite:///desafio.db', echo=True)
+engine = create_engine('sqlite:///meubanco.db', echo=True)
 Base.metadata.create_all(engine)
 
 Session = sessionmaker(bind=engine)
